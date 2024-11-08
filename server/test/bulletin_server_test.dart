@@ -1,13 +1,13 @@
-import 'package:server/get_html_bulletin.dart';
+import 'package:server/get_html.dart';
 import 'package:test/test.dart';
 
 void main() {
   test('ClassOpen Reachable', () async {
-    final String response = await getHtmlBulletin('CPTR', 450);
+    final String response = await getHtml();
     expect(
       response.isNotEmpty,
       true,
-      reason: 'Did not receive anything from ClassOpen',
+      reason: 'Did not receive anything from EQ Checkout',
     );
   });
 }
