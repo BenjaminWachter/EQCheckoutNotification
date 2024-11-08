@@ -1,0 +1,24 @@
+name: server
+description: Capture class open data and make it available to our client as a CSV file.
+version: 1.0.0
+# repository: https://gitlab.cs.wallawalla.edu/wwu/schedule
+
+environment:
+  sdk: ^3.2.6
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.0
+  args: ^2.3.0
+  csv: ^6.0.0
+  html: ^0.15.4
+  http: ^1.2.2
+  shelf: ^1.4.0
+  shelf_cors_headers: ^0.1.4
+  shelf_router: ^1.1.0
+  universal_html: ^2.2.4
+
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.24.0
+  
