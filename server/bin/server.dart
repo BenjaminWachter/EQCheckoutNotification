@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:server/get_html.dart';
 
 Future<void> dataStream() async {
+  data = getHtml();
 }
 
 String data = '';
