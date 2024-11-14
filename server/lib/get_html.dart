@@ -1,5 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:server/get_pass.dart';
+import 'package:html/parser.dart' show parse;
+
 
 Future<String> getHtml() async {
   final Iterable<String> loginInfo = await getEmailAndPassword();
@@ -15,5 +17,9 @@ Future<String> getHtml() async {
     ),
   );
 
-  return response.body;
+  return response.getElementById('schedule');
+}
+void main() async {
+  final response = await getHtml();
+  print(response);
 }

@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:server/get_html.dart';
+import 'package:server/html_handler.dart';
 
 Future<void> dataStream() async {
-  data = getHtml();
+  data = await htmlParse();
 }
 
 String data = '';
@@ -13,9 +13,9 @@ void main() async {
   final host = Platform.localHostname;
   final File file;
   if (host == 'schedule-vm') {
-    file = File('/var/www/html/assets/class_data.csv');
+    file = File('/var/www/html/assets/class_data.txt');
   } else {
-    file = File('../client/assets/class_data.csv');
+    file = File('../client/assets/class_data.txt');
   }
 
   // ignore: unused_local_variable
