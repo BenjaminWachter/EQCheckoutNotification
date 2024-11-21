@@ -1,24 +1,39 @@
 import 'package:http/http.dart' as http;
 import 'package:server/get_pass.dart';
-import 'package:html/parser.dart' show parse;
-
 
 Future<String> getHtml() async {
   final Iterable<String> loginInfo = await getEmailAndPassword();
-  final Map<String, String> queryParams = <String, String>{
+  final Map<String, String> formData = <String, String>{
     'email': loginInfo.first,
-    'submit': loginInfo.last,
+    'password': loginInfo.last,
   };
-  final response = await http.get(
+  final response = await http.post(
     Uri.https(
       'wwufilmtv.eqcheckout.com',
-      '/dashboard',
-      queryParams,
+      '/user/login',
     ),
+    headers: <String, String>{
+      'email': loginInfo.first,
+      'password': loginInfo.last,
+    },
   );
-
-  return response.getElementById('schedule');
+  print(response.body);
+  return response.body;
+  // ignore: dead_code
+  if (response.statusCode == 200) {
+    final dashboardResponse = await http.get(
+      Uri.https(
+        'wwufilmtv.eqcheckout.com',
+        '/dashboard',
+      ),
+      headers: <String, String>{'cookie': response.headers['set-cookie'] ?? ''},
+    );
+    return dashboardResponse.body;
+  } else {
+    throw Exception('Failed to log in');
+  }
 }
+
 void main() async {
   final response = await getHtml();
   print(response);

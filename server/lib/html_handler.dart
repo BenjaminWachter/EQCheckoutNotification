@@ -5,14 +5,15 @@ Future<String?> htmlParse() async {
 
   // Extract elements with class="desc"
   final htmlString = await getHtml();
-  final checkoutBlock = parse(htmlString).getElementById('schedule');
+  final document = parse(htmlString);
+  print(htmlString);
+  final checkoutBlock = document.getElementById('schedule');
 
-  // if (checkoutBlock != null) {
-    //paarsing the html
+  if (checkoutBlock != null) {
+    // paarsing the html
     // returns csv data
-    return checkoutBlock?.outerHtml;
-  // }
-  // ignore: dead_code
+    return checkoutBlock.outerHtml;
+  }
   return 'Failed to load the webpage.';
 }
 
