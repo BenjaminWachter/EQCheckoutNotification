@@ -3,24 +3,17 @@ import 'package:server/get_pass.dart';
 
 Future<String> getHtml() async {
   final Iterable<String> loginInfo = await getEmailAndPassword();
-  final Map<String, String> formData = <String, String>{
-    'email': loginInfo.first,
-    'password': loginInfo.last,
-  };
   final response = await http.post(
     Uri.https(
       'wwufilmtv.eqcheckout.com',
       '/user/login',
     ),
-    headers: <String, String>{
+    body: <String, String>{
       'email': loginInfo.first,
       'password': loginInfo.last,
     },
   );
-  print(response.body);
-  return response.body;
-  // ignore: dead_code
-  if (response.statusCode == 200) {
+  if (response.statusCode == 302) {
     final dashboardResponse = await http.get(
       Uri.https(
         'wwufilmtv.eqcheckout.com',
