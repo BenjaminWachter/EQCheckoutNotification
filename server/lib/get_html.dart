@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:server/get_pass.dart';
 
-Future<String> getHtml() async {
+Future<Map<String, String>> getHtml() async {
   final Iterable<String> loginInfo = await getEmailAndPassword();
   final response = await http.post(
     Uri.https(
@@ -21,13 +21,11 @@ Future<String> getHtml() async {
       ),
       headers: <String, String>{'cookie': response.headers['set-cookie'] ?? ''},
     );
-    return dashboardResponse.body;
+    return {
+      'body': dashboardResponse.body,
+      'cookie': response.headers['set-cookie'] ?? '',
+    };
   } else {
     throw Exception('Failed to log in');
   }
-}
-
-void main() async {
-  final response = await getHtml();
-  print(response);
 }

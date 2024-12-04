@@ -1,0 +1,350 @@
+<html lang="en"><head><style data-merge-styles="true"></style>
+	<style data-merge-styles="true"></style><style data-merge-styles="true"></style><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<meta name="description" content="EQ Checkout is an equipment reservation and check out system.">
+	<link rel="icon" href="../favicon.ico">
+	<title>EQ Checkout: Equipment Reservation System</title>
+
+	<!-- <link href="/css/bootstrap.css" rel="stylesheet" /> -->
+	<link href="/css/reset.css" rel="stylesheet">
+	<link href="/css/icons/style.css" rel="stylesheet">
+	<link href="/js/magnific-popup/magnific-popup.css" rel="stylesheet">
+	<link href="/js/dropzone/dropzone.min.css" rel="stylesheet">
+	<link href="/css/EQCheckoutStyle.css?v=3.02" rel="stylesheet">
+
+</head>
+<body>
+	
+<nav>
+	<div class="container">
+		<button class="menu">☰</button>
+		<a class="brand" href="/"><img src="/css/EQCheckoutLogo.svg"> <span>EQ Checkout</span></a>
+		<ul class="menuItems">
+			<li><a href="/">Home</a></li>
+
+			
+						<li><a href="/item/viewAll">Items</a></li>
+			<li><a href="/user/viewAll">Users</a></li>
+			<!-- <li><a href="/role/viewAll">Roles</a></li> -->
+			<li><a href="/organization/view">Prefs</a></li>
+			
+						<div class="dropdown currentUser">
+				<button class="btn">Ben Wachter</button>
+				<div class="dropdownItems">
+					<a class="dropdownItem" href="/user/view/213">Profile</a>
+					<a class="dropdownItem" href="/user/logout">Logout</a>
+				</div>
+			</div>
+					</ul>
+
+	</div>
+</nav>
+
+
+
+<!-- <div class="navSpacer"></div> -->
+
+<main role="main">
+
+<div id="main">
+<div class="container dashboard images">
+
+	<h1>Walla Walla University Center for Media Ministry</h1>
+
+
+
+	<div class="row"><div class="col-sm-4 col-sm-push-8"><div class="makeAReservation">
+
+	<h2>Make a Reservation</h2>
+
+	<form action="/reservation/make" method="get" accept-charset="utf-8">
+	
+				<!-- select a user -->
+		<div class="selectUser">
+			<label for="userId">for</label>
+			<select name="userId" id="userId">
+				<option value="">choose a user...</option>
+									<option value="261">Abel biruk</option>
+									<option value="236">Adam Lewis</option>
+									<option value="286">Adam Tejeda</option>
+									<option value="222">Aidan Hinshaw</option>
+									<option value="232">Akairo Pot</option>
+									<option value="293">Alexis Fadness</option>
+									<option value="281">Alivia MacKenzie</option>
+									<option value="238">Allyzza Kate Pascual </option>
+									<option value="295">Anastasia Uhrig</option>
+									<option value="161">Andreas Grellmann</option>
+									<option value="276">Andres Anaya</option>
+									<option value="275">Andres Espinel</option>
+									<option value="88">Andrew Boyd</option>
+									<option value="196">Andrew Sanchez</option>
+									<option value="148">Andrews Ferreira</option>
+									<option value="248">Ash Aispuro</option>
+									<option value="219">Ash Olson</option>
+									<option value="151">ASWWU Collegian</option>
+									<option value="280">Aubrey Herbert</option>
+									<option value="256">Azaiah Garcia</option>
+									<option value="49">Barbara Chavez</option>
+									<option value="237">Bauer Meeks</option>
+									<option value="213">Ben Wachter</option>
+									<option value="10">Brandon Walker</option>
+									<option value="181">Brett Wilson</option>
+									<option value="175">Brian Harris</option>
+									<option value="202">Caeden Rogers</option>
+									<option value="214">Caleb Bryan</option>
+									<option value="266">Caleb Golden</option>
+									<option value="296">Carlos Herrera</option>
+									<option value="269">Carson Cox</option>
+									<option value="178">Cascadia Schneider</option>
+									<option value="252">Cesar Pinell</option>
+									<option value="259">Cesar Pinell</option>
+									<option value="189">Cesia Nunez</option>
+									<option value="165">Chad Washburn</option>
+									<option value="271">Chase Smith</option>
+									<option value="279">Claire Christensen</option>
+									<option value="6">Clayton Kruse</option>
+									<option value="210">Colby Blake Villa</option>
+									<option value="260">Curtis Morris</option>
+									<option value="253">Davis Nordby</option>
+									<option value="191">Dawsen Johnson</option>
+									<option value="262">Dmitry Kozakov</option>
+									<option value="184">Dustin Rose</option>
+									<option value="239">Egan Schmidt Weiss</option>
+									<option value="194">Elijah Baez</option>
+									<option value="258">Elizabeth Szabo</option>
+									<option value="247">Emily Vaughn</option>
+									<option value="242">Emily Wical</option>
+									<option value="177">Emmett Semple</option>
+									<option value="270">Emporess Dean</option>
+									<option value="250">Esteban Cordova</option>
+									<option value="174">Estibaliz Vazquez</option>
+									<option value="292">Ezekiel-Ekane Otong</option>
+									<option value="285">fabien graham</option>
+									<option value="235">Fred Martsch</option>
+									<option value="218">Gabriel Monteiro-Gomes</option>
+									<option value="208">Gavin Stacey</option>
+									<option value="172">Geoffrey Nkosi</option>
+									<option value="190">Grace Morales</option>
+									<option value="273">Heidi Kissinger</option>
+									<option value="131">Isaac Baik</option>
+									<option value="159">Isaac Meythaler</option>
+									<option value="283">Isaac Peterson</option>
+									<option value="288">Isabella Meadowcroft </option>
+									<option value="263">Isabella Narvaez</option>
+									<option value="180">Jack Darrow </option>
+									<option value="233">James Freeman</option>
+									<option value="173">Jamison Logan</option>
+									<option value="8">Jared Jamieson</option>
+									<option value="282">Jasmine Edmundson</option>
+									<option value="162">Jason Schafer</option>
+									<option value="243">Jaxon Sackett</option>
+									<option value="272">Jayden Hood</option>
+									<option value="255">JB Wa-Mbaleka</option>
+									<option value="284">Jeffrey McCormick</option>
+									<option value="254">Jennifer Buyco</option>
+									<option value="187">Jeremy Reed</option>
+									<option value="1">Jerry Hartman</option>
+									<option value="183">Joanne Harrington</option>
+									<option value="257">Jocelyn Seaton</option>
+									<option value="58">Jordan Barnett</option>
+									<option value="163">Jose Segovia</option>
+									<option value="240">Joseph Brannaka</option>
+									<option value="150">Joshua Peinado</option>
+									<option value="32">Josie Henderson</option>
+									<option value="291">Julianna Tkachuck</option>
+									<option value="127">Julio Munoz</option>
+									<option value="245">Justin Singer</option>
+									<option value="226">Kaitlin Roach</option>
+									<option value="217">Kalissa Krause</option>
+									<option value="223">Kasi Irvine</option>
+									<option value="203">Kelsey Bitton</option>
+									<option value="167">Krista VanHook</option>
+									<option value="277">Lauren Vizcarra</option>
+									<option value="179">Lauryn Hieb</option>
+									<option value="234">LeVann Leas</option>
+									<option value="37">Liam Hirst-Graves</option>
+									<option value="108">Liam O'Riley</option>
+									<option value="87">Lindsey Crumley</option>
+									<option value="176">Lindsey Gispert</option>
+									<option value="77">Lowell Mann</option>
+									<option value="241">Lynelle Ellis</option>
+									<option value="113">Mallory Newmyer</option>
+									<option value="198">Marcus Lupse</option>
+									<option value="105">Matt Webster</option>
+									<option value="206">Matthew Peinado</option>
+									<option value="251">Matthew Rumbaoa</option>
+									<option value="64">McKenna Butler</option>
+									<option value="29">Michael Jimenez</option>
+									<option value="225">Michelle Fullen</option>
+									<option value="290">Naomi Pepper</option>
+									<option value="268">Natalia Jimenez</option>
+									<option value="134">Natasha Hasslen</option>
+									<option value="228">Nathaniel Van Kirk</option>
+									<option value="14">Noah Dauncey</option>
+									<option value="90">Peter Savard</option>
+									<option value="126">Rachel Scribner</option>
+									<option value="30">Rachel Thiel</option>
+									<option value="249">Reagan Peterson</option>
+									<option value="199">Rebekah Crary</option>
+									<option value="278">Ryan Hughes</option>
+									<option value="170">Ryan Rojas</option>
+									<option value="209">Ryan Smith</option>
+									<option value="244">Salina Arias</option>
+									<option value="215">Samantha Grecov Molina</option>
+									<option value="229">Samantha Wawondatu</option>
+									<option value="224">Samuel Piner</option>
+									<option value="192">Samuel Shinner</option>
+									<option value="195">Sara Downs</option>
+									<option value="265">Seth Wohlberg</option>
+									<option value="289">Shawne Smith</option>
+									<option value="267">Silas Dagger</option>
+									<option value="207">Stacy Wisener</option>
+									<option value="149">Stefan DePaula</option>
+									<option value="246">Stephani Castro</option>
+									<option value="221">Stevan Crary</option>
+									<option value="200">Summer Boulais</option>
+									<option value="287">Tawanda Meda </option>
+									<option value="205">Thomas Warren</option>
+									<option value="201">Toby Pitton</option>
+									<option value="95">Tori Johnson</option>
+									<option value="65">Trevor Claridge </option>
+									<option value="99">Tristan Driver</option>
+									<option value="111">U View &amp; Studio</option>
+									<option value="135">Victoria Ico</option>
+									<option value="294">Victoria Johnson</option>
+									<option value="212">William Frohne</option>
+									<option value="171">William Su</option>
+									<option value="216">Xavier Alarid</option>
+									<option value="160">Yumiko Hilasaca</option>
+									<option value="231">Zach Gilliland</option>
+									<option value="274">Zach Licon</option>
+									<option value="264">Zachary Gilliland</option>
+									<option value="186">Zachary Licon</option>
+									<option value="56">Zoe Ferrell</option>
+							</select>
+		</div>
+				
+		<div class="pickUp">
+			<label for="beginDay">pick up</label>
+			<nobr>
+			<select name="beginDay" id="beginDay">
+				<option value="2024-11-08">Fri, Nov 8</option><option value="2024-11-11">Mon, Nov 11</option><option value="2024-11-12">Tue, Nov 12</option><option value="2024-11-13">Wed, Nov 13</option><option value="2024-11-14">Thu, Nov 14</option><option value="2024-11-15">Fri, Nov 15</option><option value="2024-11-18">Mon, Nov 18</option><option value="2024-11-19">Tue, Nov 19</option><option value="2024-11-20">Wed, Nov 20</option><option value="2024-11-21">Thu, Nov 21</option><option value="2024-11-22">Fri, Nov 22</option><option value="2024-11-25">Mon, Nov 25</option><option value="2024-11-26">Tue, Nov 26</option><option value="2024-11-27">Wed, Nov 27</option><option value="2024-11-28">Thu, Nov 28</option><option value="2024-11-29">Fri, Nov 29</option><option value="2024-12-02">Mon, Dec 2</option><option value="2024-12-03">Tue, Dec 3</option><option value="2024-12-04">Wed, Dec 4</option><option value="2024-12-05">Thu, Dec 5</option><option value="2024-12-06">Fri, Dec 6</option><option value="2024-12-09">Mon, Dec 9</option><option value="2024-12-10">Tue, Dec 10</option><option value="2024-12-11">Wed, Dec 11</option><option value="2024-12-12">Thu, Dec 12</option><option value="2024-12-13">Fri, Dec 13</option><option value="2024-12-16">Mon, Dec 16</option><option value="2024-12-17">Tue, Dec 17</option><option value="2024-12-18">Wed, Dec 18</option><option value="2024-12-19">Thu, Dec 19</option><option value="2024-12-20">Fri, Dec 20</option><option value="2024-12-23">Mon, Dec 23</option><option value="2024-12-24">Tue, Dec 24</option><option value="2024-12-25">Wed, Dec 25</option><option value="2024-12-26">Thu, Dec 26</option><option value="2024-12-27">Fri, Dec 27</option><option value="2024-12-30">Mon, Dec 30</option><option value="2024-12-31">Tue, Dec 31</option><option value="2025-01-01">Wed, Jan 1</option><option value="2025-01-02">Thu, Jan 2</option><option value="2025-01-03">Fri, Jan 3</option><option value="2025-01-06">Mon, Jan 6</option><option value="2025-01-07">Tue, Jan 7</option><option value="2025-01-08">Wed, Jan 8</option><option value="2025-01-09">Thu, Jan 9</option><option value="2025-01-10">Fri, Jan 10</option><option value="2025-01-13">Mon, Jan 13</option><option value="2025-01-14">Tue, Jan 14</option><option value="2025-01-15">Wed, Jan 15</option><option value="2025-01-16">Thu, Jan 16</option><option value="2025-01-17">Fri, Jan 17</option><option value="2025-01-20">Mon, Jan 20</option><option value="2025-01-21">Tue, Jan 21</option><option value="2025-01-22">Wed, Jan 22</option><option value="2025-01-23">Thu, Jan 23</option><option value="2025-01-24">Fri, Jan 24</option><option value="2025-01-27">Mon, Jan 27</option><option value="2025-01-28">Tue, Jan 28</option><option value="2025-01-29">Wed, Jan 29</option><option value="2025-01-30">Thu, Jan 30</option><option value="2025-01-31">Fri, Jan 31</option><option value="2025-02-03">Mon, Feb 3</option><option value="2025-02-04">Tue, Feb 4</option><option value="2025-02-05">Wed, Feb 5</option><option value="2025-02-06">Thu, Feb 6</option><option value="2025-02-07">Fri, Feb 7</option><option value="2025-02-10">Mon, Feb 10</option><option value="2025-02-11">Tue, Feb 11</option><option value="2025-02-12">Wed, Feb 12</option><option value="2025-02-13">Thu, Feb 13</option><option value="2025-02-14">Fri, Feb 14</option><option value="2025-02-17">Mon, Feb 17</option><option value="2025-02-18">Tue, Feb 18</option><option value="2025-02-19">Wed, Feb 19</option><option value="2025-02-20">Thu, Feb 20</option><option value="2025-02-21">Fri, Feb 21</option><option value="2025-02-24">Mon, Feb 24</option><option value="2025-02-25">Tue, Feb 25</option><option value="2025-02-26">Wed, Feb 26</option><option value="2025-02-27">Thu, Feb 27</option><option value="2025-02-28">Fri, Feb 28</option><option value="2025-03-03">Mon, Mar 3</option><option value="2025-03-04">Tue, Mar 4</option><option value="2025-03-05">Wed, Mar 5</option><option value="2025-03-06">Thu, Mar 6</option><option value="2025-03-07">Fri, Mar 7</option><option value="2025-03-10">Mon, Mar 10</option><option value="2025-03-11">Tue, Mar 11</option><option value="2025-03-12">Wed, Mar 12</option><option value="2025-03-13">Thu, Mar 13</option><option value="2025-03-14">Fri, Mar 14</option><option value="2025-03-17">Mon, Mar 17</option><option value="2025-03-18">Tue, Mar 18</option><option value="2025-03-19">Wed, Mar 19</option><option value="2025-03-20">Thu, Mar 20</option><option value="2025-03-21">Fri, Mar 21</option><option value="2025-03-24">Mon, Mar 24</option><option value="2025-03-25">Tue, Mar 25</option><option value="2025-03-26">Wed, Mar 26</option><option value="2025-03-27">Thu, Mar 27</option><option value="2025-03-28">Fri, Mar 28</option><option value="2025-03-31">Mon, Mar 31</option><option value="2025-04-01">Tue, Apr 1</option><option value="2025-04-02">Wed, Apr 2</option><option value="2025-04-03">Thu, Apr 3</option><option value="2025-04-04">Fri, Apr 4</option><option value="2025-04-07">Mon, Apr 7</option><option value="2025-04-08">Tue, Apr 8</option><option value="2025-04-09">Wed, Apr 9</option><option value="2025-04-10">Thu, Apr 10</option><option value="2025-04-11">Fri, Apr 11</option>			</select>
+			<select name="beginTime" id="beginTime">
+				<option value="13:15:00">1:15 pm</option><option value="13:30:00">1:30 pm</option><option value="13:45:00">1:45 pm</option><option value="14:00:00">2:00 pm</option><option value="14:15:00">2:15 pm</option><option value="14:30:00">2:30 pm</option><option value="14:45:00">2:45 pm</option><option value="15:00:00">3:00 pm</option><option value="15:15:00">3:15 pm</option><option value="15:30:00">3:30 pm</option><option value="15:45:00">3:45 pm</option>			</select>
+			</nobr>
+		</div>
+	
+		<div class="return">
+			<label for="endDay">return</label>
+			<nobr>
+			<select name="endDay" id="endDay">
+				<option value="2024-11-08">Fri, Nov 8</option><option value="2024-11-11">Mon, Nov 11</option><option value="2024-11-12">Tue, Nov 12</option><option value="2024-11-13">Wed, Nov 13</option><option value="2024-11-14">Thu, Nov 14</option><option value="2024-11-15">Fri, Nov 15</option><option value="2024-11-18">Mon, Nov 18</option><option value="2024-11-19">Tue, Nov 19</option><option value="2024-11-20">Wed, Nov 20</option><option value="2024-11-21">Thu, Nov 21</option><option value="2024-11-22">Fri, Nov 22</option><option value="2024-11-25">Mon, Nov 25</option><option value="2024-11-26">Tue, Nov 26</option><option value="2024-11-27">Wed, Nov 27</option><option value="2024-11-28">Thu, Nov 28</option><option value="2024-11-29">Fri, Nov 29</option><option value="2024-12-02">Mon, Dec 2</option><option value="2024-12-03">Tue, Dec 3</option><option value="2024-12-04">Wed, Dec 4</option><option value="2024-12-05">Thu, Dec 5</option><option value="2024-12-06">Fri, Dec 6</option><option value="2024-12-09">Mon, Dec 9</option><option value="2024-12-10">Tue, Dec 10</option><option value="2024-12-11">Wed, Dec 11</option><option value="2024-12-12">Thu, Dec 12</option><option value="2024-12-13">Fri, Dec 13</option><option value="2024-12-16">Mon, Dec 16</option><option value="2024-12-17">Tue, Dec 17</option><option value="2024-12-18">Wed, Dec 18</option><option value="2024-12-19">Thu, Dec 19</option><option value="2024-12-20">Fri, Dec 20</option><option value="2024-12-23">Mon, Dec 23</option><option value="2024-12-24">Tue, Dec 24</option><option value="2024-12-25">Wed, Dec 25</option><option value="2024-12-26">Thu, Dec 26</option><option value="2024-12-27">Fri, Dec 27</option><option value="2024-12-30">Mon, Dec 30</option><option value="2024-12-31">Tue, Dec 31</option><option value="2025-01-01">Wed, Jan 1</option><option value="2025-01-02">Thu, Jan 2</option><option value="2025-01-03">Fri, Jan 3</option><option value="2025-01-06">Mon, Jan 6</option><option value="2025-01-07">Tue, Jan 7</option><option value="2025-01-08">Wed, Jan 8</option><option value="2025-01-09">Thu, Jan 9</option><option value="2025-01-10">Fri, Jan 10</option><option value="2025-01-13">Mon, Jan 13</option><option value="2025-01-14">Tue, Jan 14</option><option value="2025-01-15">Wed, Jan 15</option><option value="2025-01-16">Thu, Jan 16</option><option value="2025-01-17">Fri, Jan 17</option><option value="2025-01-20">Mon, Jan 20</option><option value="2025-01-21">Tue, Jan 21</option><option value="2025-01-22">Wed, Jan 22</option><option value="2025-01-23">Thu, Jan 23</option><option value="2025-01-24">Fri, Jan 24</option><option value="2025-01-27">Mon, Jan 27</option><option value="2025-01-28">Tue, Jan 28</option><option value="2025-01-29">Wed, Jan 29</option><option value="2025-01-30">Thu, Jan 30</option><option value="2025-01-31">Fri, Jan 31</option><option value="2025-02-03">Mon, Feb 3</option><option value="2025-02-04">Tue, Feb 4</option><option value="2025-02-05">Wed, Feb 5</option><option value="2025-02-06">Thu, Feb 6</option><option value="2025-02-07">Fri, Feb 7</option><option value="2025-02-10">Mon, Feb 10</option><option value="2025-02-11">Tue, Feb 11</option><option value="2025-02-12">Wed, Feb 12</option><option value="2025-02-13">Thu, Feb 13</option><option value="2025-02-14">Fri, Feb 14</option><option value="2025-02-17">Mon, Feb 17</option><option value="2025-02-18">Tue, Feb 18</option><option value="2025-02-19">Wed, Feb 19</option><option value="2025-02-20">Thu, Feb 20</option><option value="2025-02-21">Fri, Feb 21</option><option value="2025-02-24">Mon, Feb 24</option><option value="2025-02-25">Tue, Feb 25</option><option value="2025-02-26">Wed, Feb 26</option><option value="2025-02-27">Thu, Feb 27</option><option value="2025-02-28">Fri, Feb 28</option><option value="2025-03-03">Mon, Mar 3</option><option value="2025-03-04">Tue, Mar 4</option><option value="2025-03-05">Wed, Mar 5</option><option value="2025-03-06">Thu, Mar 6</option><option value="2025-03-07">Fri, Mar 7</option><option value="2025-03-10">Mon, Mar 10</option><option value="2025-03-11">Tue, Mar 11</option><option value="2025-03-12">Wed, Mar 12</option><option value="2025-03-13">Thu, Mar 13</option><option value="2025-03-14">Fri, Mar 14</option><option value="2025-03-17">Mon, Mar 17</option><option value="2025-03-18">Tue, Mar 18</option><option value="2025-03-19">Wed, Mar 19</option><option value="2025-03-20">Thu, Mar 20</option><option value="2025-03-21">Fri, Mar 21</option><option value="2025-03-24">Mon, Mar 24</option><option value="2025-03-25">Tue, Mar 25</option><option value="2025-03-26">Wed, Mar 26</option><option value="2025-03-27">Thu, Mar 27</option><option value="2025-03-28">Fri, Mar 28</option><option value="2025-03-31">Mon, Mar 31</option><option value="2025-04-01">Tue, Apr 1</option><option value="2025-04-02">Wed, Apr 2</option><option value="2025-04-03">Thu, Apr 3</option><option value="2025-04-04">Fri, Apr 4</option><option value="2025-04-07">Mon, Apr 7</option><option value="2025-04-08">Tue, Apr 8</option><option value="2025-04-09">Wed, Apr 9</option><option value="2025-04-10">Thu, Apr 10</option><option value="2025-04-11">Fri, Apr 11</option>			</select>		
+			<select name="endTime" id="endTime">
+				<option value="13:15:00">1:15 pm</option><option value="13:30:00">1:30 pm</option><option value="13:45:00">1:45 pm</option><option value="14:00:00">2:00 pm</option><option value="14:15:00">2:15 pm</option><option value="14:30:00">2:30 pm</option><option value="14:45:00">2:45 pm</option><option value="15:00:00">3:00 pm</option><option value="15:15:00">3:15 pm</option><option value="15:30:00">3:30 pm</option><option value="15:45:00">3:45 pm</option>			</select>		
+			</nobr>
+		</div>
+		
+		<div class="next">
+			<label></label>
+			<button type="submit" class="btn">Next »</button>
+		</div>
+
+	</form>
+</div>
+<div class="homeMessage postit"><span class="pin"></span>𝐏𝐥𝐞𝐚𝐬𝐞 𝐠𝐢𝐯𝐞 𝐮𝐬 𝐚𝐭 𝐥𝐞𝐚𝐬𝐭 𝐚 𝟐𝟒𝐡 𝐧𝐨𝐭𝐢𝐜𝐞 𝐢𝐧 𝐚𝐝𝐯𝐚𝐧𝐜𝐞 𝐟𝐨𝐫 𝐀𝐋𝐋 𝐑𝐄𝐒𝐄𝐑𝐕𝐀𝐓𝐈𝐎𝐍𝐒.
+<br>
+<br>
+<br>ONLY RESERVE FOR: 2 day weekday reservations, 3 day weekend reservations.
+<br>
+<br>
+<br>
+<br>Thank you.</div><div class="officeHours"><h2>Regular Office Hours</h2>
+<dl class="officeHours"><dt>Sunday</dt><dd><span class="faded">no office hours</span></dd><dt>Monday</dt><dd>5:00 pm - 10:00 pm</dd><dt>Tuesday</dt><dd>5:00 pm - 10:00 pm</dd><dt>Wednesday</dt><dd>4:00 pm - 10:00 pm</dd><dt>Thursday</dt><dd>5:00 pm - 10:00 pm</dd><dt>Friday</dt><dd>12:00 pm - 4:00 pm</dd><dt>Saturday</dt><dd><span class="faded">no office hours</span></dd>
+</dl></div></div><div class="col-sm-8 col-sm-pull-4"><div id="schedule">
+<h2>Schedule</h2>
+
+
+<div class="day today  ">
+<h3>
+<time class="day">Friday, November 8</time>
+<div class="aboutThisDay">
+<span class="today">Today</span></div></h3>
+<div class="notifications">
+<p class="user overdue"><span class="name">Gabriel Monteiro-Gomes</span> has <a href="/reservation/make?userId=218&amp;begin=11%2F7%2F24+9%3A00+pm&amp;end=11%2F8%2F24+1%3A00+pm">13 items</a> that are overdue.</p>
+</div></div>
+<div class="day   ">
+<h3>
+<time class="day">Monday, November 11</time></h3>
+<div class="eventTime">
+<time class="hour">5:00 pm</time>
+<div class="users">
+<p class="user returning"><span class="name">Seth Wohlberg</span>: returning <a href="/reservation/make?userId=265&amp;begin=11%2F7%2F24+5%3A00+pm&amp;end=11%2F11%2F24+5%3A00+pm">14 items</a></p>
+<p class="user returning"><span class="name">Carlos Herrera</span>: returning <a href="/reservation/make?userId=296&amp;begin=11%2F8%2F24+12%3A00+pm&amp;end=11%2F11%2F24+5%3A00+pm">9 items</a></p>
+<p class="user pickingUp"><span class="name">Naomi Pepper</span>: picking up <a href="/reservation/make?userId=290&amp;begin=11%2F11%2F24+5%3A00+pm&amp;end=11%2F13%2F24+5%3A00+pm">7 items</a></p>
+</div>
+</div>
+<div class="eventTime">
+<time class="hour">6:00 pm</time>
+<div class="users">
+<p class="user returning"><span class="name">Nathaniel Van Kirk</span>: returning <a href="/reservation/make?userId=228&amp;begin=11%2F8%2F24+12%3A00+pm&amp;end=11%2F11%2F24+6%3A00+pm">1 item</a></p>
+</div>
+</div>
+<div class="eventTime">
+<time class="hour">8:45 pm</time>
+<div class="users">
+<p class="user returning"><span class="name">Jasmine Edmundson</span>: returning <a href="/reservation/make?userId=282&amp;begin=11%2F7%2F24+8%3A45+pm&amp;end=11%2F11%2F24+8%3A45+pm">14 items</a></p>
+</div>
+</div></div>
+<div class="day   ">
+<h3>
+<time class="day">Wednesday, November 13</time></h3>
+<div class="eventTime">
+<time class="hour">5:00 pm</time>
+<div class="users">
+<p class="user returning"><span class="name">Naomi Pepper</span>: returning <a href="/reservation/make?userId=290&amp;begin=11%2F11%2F24+5%3A00+pm&amp;end=11%2F13%2F24+5%3A00+pm">7 items</a></p>
+</div>
+</div>
+<div class="eventTime">
+<time class="hour">6:00 pm</time>
+<div class="users">
+<p class="user returning"><span class="name">Shawne Smith</span>: returning <a href="/reservation/make?userId=289&amp;begin=11%2F6%2F24+9%3A30+pm&amp;end=11%2F13%2F24+6%3A00+pm">25 items</a></p>
+</div>
+</div></div></div></div></div>
+
+</div><!-- end container -->
+</div>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<p>
+				<a href="https://eqcheckout.com/">About EQ Checkout</a>
+								<!-- <a href="/releaseNotes">Release Notes</a> -->
+				<a href="/help">Help Videos</a>
+				<a href="/privacy">Privacy Policy</a>
+				<a href="/terms">Terms of Service</a>
+				<a href="mailto:contact@eqcheckout.com?subject=feedback">Feedback</a>
+			</p>
+			<p class="copyright">
+				© 2024 EQ Checkout. All rights reserved.
+			</p>
+		</div>
+	</div>
+</div>
+</footer>
+
+
+<!-- js -->
+<script src="/js/jquery/jquery-3.1.0.min.js"></script>
+<script src="/js/magnific-popup/jquery.magnific-popup.js"></script>
+<script src="/js/dropzone/dropzone.js"></script>
+<script src="/js/min/app-min.js?v=2.00"></script>
+
+
+
+</body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; inset-area: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"><div style="all: initial;"></div></div><div style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: absolute; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; inset-area: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-clip-margin: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; quotes: initial; r: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://hokifickgkhplphjiodbggjmoafhignh/fonts/fabric-icons.css"></div></div></editor-card></html>
