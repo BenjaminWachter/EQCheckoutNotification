@@ -15,7 +15,8 @@ Future<String?> htmlParse() async {
 
   if (checkoutBlock != null) {
     // parse checkout block for names checking out and are not in a csv file
-    final checkoutList = checkoutBlock.querySelectorAll('.day.');
+    final allDays = checkoutBlock.querySelectorAll('.day');
+    final checkoutList = [for (int i = 1; i < allDays.length; i += 2) allDays[i]];
     final namesCheckingOut = checkoutBlock.querySelectorAll('.name');
     final csvFile = File('checkout_log.csv');
     List<List<dynamic>> csvData = [];
@@ -25,17 +26,14 @@ Future<String?> htmlParse() async {
       csvData = CsvToListConverter().convert(csvString);
     }
     for (final checkout in checkoutList) {
-      print(checkout.className.trim());
-      if (checkout.className.trim() == 'day today '){
-        final dayElement = DateTime.now().day.toString();
-      } else {
-      // final dayElement = nameElement.parent?.querySelector('.day');
-      }
+      print(checkout.innerHtml);
+      final dayElement = checkout.innerHtml;
+      print(checkout.parent?.nextElementSibling?.outerHtml);
+    }
 
-    for (var nameElement in namesCheckingOut) {
+    for (final nameElement in namesCheckingOut) {
       final name = nameElement.text.trim();
       final dayElement = nameElement.parent?.querySelector('.day');
-      print(dayElement);
       final timeCheckedOut = dayElement?.text.trim() ?? 'Unknown';
 
       bool nameExists = csvData.any((row) => row.contains(name));
@@ -49,11 +47,11 @@ Future<String?> htmlParse() async {
 
     // returns csv data
     return checkoutBlock.outerHtml;
-  }}
+  }
   return 'Failed to load the webpage.';
 }
 
 void main() async {
   final response = await htmlParse();
-  print(response);
+  // print(response);
 }
